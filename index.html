@@ -5,60 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | MOCH ADHIMAS ABHIMATA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .accent-red { color: #e11d48; }
-        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-dark { background: #111111; border: 1px solid #222222; border-radius: 12px; }
+        .red-glow { box-shadow: 0 0 20px rgba(225, 29, 72, 0.2); }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-10">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-2xl font-bold tracking-tighter">ABHIMATA<span class="accent-red">.</span></h1>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="#work" class="hover:text-rose-500 transition">Work</a>
-            <a href="#experience" class="hover:text-rose-500 transition">Experience</a>
-            <a href="#contact" class="px-4 py-2 bg-rose-600 rounded-full hover:bg-rose-700 transition">Contact</a>
-        </div>
-    </nav>
+    <header class="max-w-5xl mx-auto mb-20 mt-10">
+        <h1 class="font-sync text-4xl md:text-6xl tracking-tighter mb-4 text-gradient uppercase">
+            MOCH ADHIMAS <br> ABHIMATA
+        </h1>
+        <p class="text-rose-600 font-bold tracking-[0.2em] text-sm uppercase mb-8">Warehouse Supervisor • Division 03 OLP</p>
+        <div class="h-[1px] w-full bg-zinc-800"></div>
+    </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-20 hero-gradient rounded-3xl mt-10">
-        <h2 class="text-6xl font-extrabold mb-6">Hi, I'm <br><span class="accent-red text-7xl">ADHIMAS.</span></h2>
-        <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
-            Warehouse Supervisor at <span class="text-white font-bold">Agres Info Teknologi</span>. 
-            Digital Content Enthusiast & Automotive Specialist. Focused on precision, 
-            high-definition results, and mechanical perfection.
-        </p>
-    </section>
-
-    <section id="experience" class="max-w-6xl mx-auto px-6 py-20">
-        <h3 class="text-3xl font-bold mb-10 border-b border-slate-800 pb-4">Professional Track</h3>
+    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <div class="space-y-12">
-            <div class="relative pl-8 border-l-2 border-rose-600">
-                <div class="absolute w-4 h-4 bg-rose-600 rounded-full -left-[9px] top-1"></div>
-                <h4 class="text-2xl font-bold">Warehouse Supervisor</h4>
-                <p class="text-rose-500 font-medium">Agres.id | Juli 2025 - Sekarang</p>
-                <ul class="mt-4 text-slate-400 space-y-2">
-                    <li>• Mengelola operasional gudang di Division 03 OLP & Warehouse JKT-JKT03A.</li>
-                    <li>• Menjamin akurasi stok barang elektronik melalui sistem manajemen digital terpadu.</li>
-                    <li>• Mengoptimalkan dokumentasi visual HD untuk pelaporan dan audit inventaris.</li>
-                </ul>
+        <div class="card-dark p-8 red-glow">
+            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ About Me</h2>
+            <p class="text-lg leading-relaxed text-zinc-300">
+                Berfokus pada presisi operasional dan manajemen stok di <span class="text-white">Agres Info Teknologi</span>. 
+                Penyuka detail visual, mobile photography, dan mekanik otomotif. 
+                Bagi gue, hasil kerja harus se-HD kualitas foto yang gue edit wkwk
+            </p>
+        </div>
+
+        <div class="card-dark p-8">
+            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ Experience</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-white font-bold text-xl">Warehouse Supervisor</h3>
+                    <p class="text-zinc-500 text-sm mb-2">Agres.id | 2025 - Present</p>
+                    <p class="text-zinc-400 text-sm italic">"Managing Division 03 OLP & JKT-JKT03A with 99% inventory accuracy."</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h3 class="text-4xl font-extrabold mb-6">Let's Connect</h3>
-        <p class="text-slate-400 mb-8">Ready for new challenges and mechanical innovations.</p>
-        <a href="mailto:email_lo@gmail.com" class="text-2xl font-bold border-b-2 border-rose-600 hover:text-rose-500 transition">
-            Say Hello.
-        </a>
-    </section>
+        <div class="card-dark p-8 md:col-span-2">
+            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ Interests</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
+                    <p class="text-white font-bold">Photography</p>
+                    <p class="text-xs text-zinc-500 mt-1">HD Visuals</p>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
+                    <p class="text-white font-bold">Logistics</p>
+                    <p class="text-xs text-zinc-500 mt-1">Management</p>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
+                    <p class="text-white font-bold">Automotive</p>
+                    <p class="text-xs text-zinc-500 mt-1">Mechanical</p>
+                </div>
+                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
+                    <p class="text-white font-bold">Tech</p>
+                    <p class="text-xs text-zinc-500 mt-1">Web Dev</p>
+                </div>
+            </div>
+        </div>
 
-    <footer class="p-10 text-center text-slate-500 text-sm">
-        &copy; 2026 MOCH ADHIMAS ABHIMATA. Built for Perfection.
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-20 pb-20 px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-zinc-600 text-sm uppercase tracking-widest">&copy; 2026 Abhimata Archive</p>
+            <div class="space-x-8">
+                <a href="mailto:bhimamas@gmail.com" class="text-white hover:text-rose-600 transition text-sm font-bold uppercase tracking-tighter">Contact</a>
+                <a href="https://wa.me/088808570404" class="text-white hover:text-rose-600 transition text-sm font-bold uppercase tracking-tighter">WhatsApp</a>
+            </div>
+        </div>
     </footer>
 
 </body>
