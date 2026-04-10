@@ -3,81 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | MOCH ADHIMAS ABHIMATA</title>
+    <title>Portfolio | MOCH ADHIMAS ABHIMATA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
         .font-sync { font-family: 'Syncopate', sans-serif; }
         .text-gradient { background: linear-gradient(to right, #ffffff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-dark { background: #111111; border: 1px solid #222222; border-radius: 12px; }
-        .red-glow { box-shadow: 0 0 20px rgba(225, 29, 72, 0.2); }
+        .card-dark { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; transition: 0.3s; }
+        .card-dark:hover { border-color: #e11d48; transform: translateY(-2px); }
+        .accent-line { width: 40px; height: 4px; background: #e11d48; border-radius: 2px; }
+        .timeline-dot { width: 12px; height: 12px; background: #e11d48; border-radius: 50%; position: absolute; left: -31px; top: 8px; box-shadow: 0 0 10px #e11d48; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="p-6 md:p-12">
 
-    <header class="max-w-5xl mx-auto mb-20 mt-10">
-        <h1 class="font-sync text-4xl md:text-6xl tracking-tighter mb-4 text-gradient uppercase">
-            MOCH ADHIMAS <br> ABHIMATA
-        </h1>
-        <p class="text-rose-600 font-bold tracking-[0.2em] text-sm uppercase mb-8">Warehouse Supervisor • Division 03 OLP</p>
-        <div class="h-[1px] w-full bg-zinc-800"></div>
+    <header class="max-w-4xl mx-auto mb-16">
+        <h1 class="font-sync text-4xl md:text-5xl tracking-tighter mb-4 text-gradient uppercase">MOCH ADHIMAS <br> ABHIMATA</h1>
+        <div class="accent-line mb-4"></div>
+        <p class="text-zinc-500 font-bold tracking-widest text-xs uppercase text-rose-600">Warehouse Specialist | JKT-JKT03A</p>
     </header>
 
-    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <main class="max-w-4xl mx-auto space-y-20">
         
-        <div class="card-dark p-8 red-glow">
-            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ About Me</h2>
-            <p class="text-lg leading-relaxed text-zinc-300">
-                Berfokus pada presisi operasional dan manajemen stok di <span class="text-white">Agres Info Teknologi</span>. 
-                Penyuka detail visual, mobile photography, dan mekanik otomotif. 
-                Bagi gue, hasil kerja harus se-HD kualitas foto yang gue edit wkwk
+        <section>
+            <h2 class="font-sync text-sm mb-6 text-zinc-600 tracking-[0.3em] uppercase">// Summary</h2>
+            <p class="text-zinc-400 leading-relaxed text-lg">
+                Profesional di bidang logistik dengan spesialisasi <span class="text-white">Inventory Control</span> dan <span class="text-white">Manajemen Gudang</span>. Terbiasa mengelola operasional harian, akurasi stok 100%, hingga kepemimpinan tim untuk efisiensi distribusi produk elektronik dan retail.
             </p>
-        </div>
+        </section>
 
-        <div class="card-dark p-8">
-            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ Experience</h2>
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-white font-bold text-xl">Warehouse Supervisor</h3>
-                    <p class="text-zinc-500 text-sm mb-2">Agres.id | 2025 - Present</p>
-                    <p class="text-zinc-400 text-sm italic">"Managing Division 03 OLP & JKT-JKT03A with 99% inventory accuracy."</p>
+        <section id="experience">
+            <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase">// Professional Journey</h2>
+            
+            <div class="relative ml-6 border-l border-zinc-800 space-y-12">
+                
+                <div class="relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="card-dark p-6">
+                        <div class="flex justify-between flex-wrap gap-2 mb-4">
+                            <h3 class="text-xl font-bold uppercase">Admin Warehouse (Supervisor Role)</h3>
+                            <span class="text-xs text-rose-600 font-mono font-bold">Juli 2025 - Sekarang</span>
+                        </div>
+                        <p class="text-zinc-300 font-semibold mb-3">PT Agres Info Technology</p>
+                        <ul class="text-zinc-500 text-sm space-y-2">
+                            <li>• Mengelola administrasi penjualan & operasional gudang terintegrasi.</li>
+                            <li>• Stock Opname mingguan/bulanan untuk sinkronisasi fisik vs sistem 100%.</li>
+                            <li>• Mengatur mutasi barang antar gudang guna menjaga ketersediaan stok.</li>
+                            <li>• Menyusun laporan penjualan & analisis data untuk manajemen.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="timeline-dot bg-zinc-700 shadow-none"></div>
+                    <div class="card-dark p-6 border-zinc-800">
+                        <div class="flex justify-between flex-wrap gap-2 mb-4">
+                            <h3 class="text-xl font-bold uppercase text-zinc-300">Leader Team Inventory Control</h3>
+                            <span class="text-xs text-zinc-500 font-mono">Juni 2024 - Juli 2025</span>
+                        </div>
+                        <p class="text-zinc-400 font-semibold mb-3">PT Astro Technologies Indonesia</p>
+                        <ul class="text-zinc-500 text-sm space-y-2">
+                            <li>• Memimpin & mengawasi staf IC dalam operasional harian.</li>
+                            <li>• Monitoring kualitas barang (WMS) & akurasi stok harian.</li>
+                            <li>• Memastikan fisik barang sesuai dokumen SO/PO saat Inbound/Outbound.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="timeline-dot bg-zinc-700 shadow-none"></div>
+                    <div class="card-dark p-6 border-zinc-800">
+                        <div class="flex justify-between flex-wrap gap-2 mb-4">
+                            <h3 class="text-xl font-bold uppercase text-zinc-300">Warehouse Incharge</h3>
+                            <span class="text-xs text-zinc-500 font-mono">April 2023 - April 2024</span>
+                        </div>
+                        <p class="text-zinc-400 font-semibold mb-3">PT Porto Indonesia Sejahtera</p>
+                        <ul class="text-zinc-500 text-sm space-y-2">
+                            <li>• PIC Warehouse untuk pendataan arus masuk/keluar barang.</li>
+                            <li>• Stock Opname rutin & penataan layout gudang yang sistematis.</li>
+                            <li>• Meningkatkan efisiensi pencarian barang melalui reorganisasi gudang.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="timeline-dot bg-zinc-700 shadow-none"></div>
+                    <div class="card-dark p-6 border-zinc-800">
+                        <div class="flex justify-between flex-wrap gap-2 mb-4">
+                            <h3 class="text-xl font-bold uppercase text-zinc-300">Staff Warehouse & Admin Marketplace</h3>
+                            <span class="text-xs text-zinc-500 font-mono">Februari 2022 - Februari 2023</span>
+                        </div>
+                        <p class="text-zinc-400 font-semibold mb-3">PT Medika Sukses Tama</p>
+                        <ul class="text-zinc-500 text-sm space-y-2">
+                            <li>• Menangani Picking & Packing akurat berdasarkan SO/PO.</li>
+                            <li>• Melayani pelanggan marketplace & menangani administrasi pengiriman.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card-dark p-8 border-rose-900/30">
+                <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">// Core Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Inventory Control</span>
+                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Stock Opname</span>
+                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">WMS (Sistem Gudang)</span>
+                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Team Leadership</span>
+                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">MS Excel (Pivot/VLOOKUP)</span>
                 </div>
             </div>
-        </div>
-
-        <div class="card-dark p-8 md:col-span-2">
-            <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">/ Interests</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
-                    <p class="text-white font-bold">Photography</p>
-                    <p class="text-xs text-zinc-500 mt-1">HD Visuals</p>
-                </div>
-                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
-                    <p class="text-white font-bold">Logistics</p>
-                    <p class="text-xs text-zinc-500 mt-1">Management</p>
-                </div>
-                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
-                    <p class="text-white font-bold">Automotive</p>
-                    <p class="text-xs text-zinc-500 mt-1">Mechanical</p>
-                </div>
-                <div class="p-4 bg-zinc-900 rounded-lg border border-zinc-800">
-                    <p class="text-white font-bold">Tech</p>
-                    <p class="text-xs text-zinc-500 mt-1">Web Dev</p>
-                </div>
+            
+            <div class="card-dark p-8 border-zinc-800">
+                <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">// Education</h2>
+                <h3 class="text-white font-bold">SMK Teknik PAL Surabaya</h3>
+                <p class="text-zinc-500 text-sm mt-1">Lulusan 2021</p>
             </div>
-        </div>
+        </section>
 
     </main>
 
-    <footer class="max-w-5xl mx-auto mt-20 pb-20 px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-zinc-600 text-sm uppercase tracking-widest">&copy; 2026 Abhimata Archive</p>
-            <div class="space-x-8">
-                <a href="mailto:bhimamas@gmail.com" class="text-white hover:text-rose-600 transition text-sm font-bold uppercase tracking-tighter">Contact</a>
-                <a href="https://wa.me/088808570404" class="text-white hover:text-rose-600 transition text-sm font-bold uppercase tracking-tighter">WhatsApp</a>
-            </div>
+    <footer class="max-w-4xl mx-auto mt-32 pb-20 border-t border-zinc-900 pt-10 text-center">
+        <div class="flex flex-wrap justify-center gap-8 mb-8 text-xs font-bold uppercase tracking-widest">
+            <a href="mailto:bhimamas@gmail.com" class="hover:text-rose-600 transition">Email</a>
+            <a href="https://wa.me/6285770840298" class="hover:text-rose-600 transition">WhatsApp</a>
+            <a href="#" class="hover:text-rose-600 transition">LinkedIn</a>
         </div>
+        <p class="text-zinc-700 text-[10px] font-sync uppercase tracking-widest">© 2026 MOCH ADHIMAS ABHIMATA - ARCHIVE 03</p>
     </footer>
 
 </body>
