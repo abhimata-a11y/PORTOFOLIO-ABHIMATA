@@ -5,170 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | MOCH ADHIMAS ABHIMATA</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .font-sync { font-family: 'Syncopate', sans-serif; }
         .text-gradient { background: linear-gradient(to right, #ffffff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-dark { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; transition: 0.3s; }
-        .card-dark:hover { border-color: #e11d48; transform: translateY(-2px); }
+        .card-dark { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-dark:hover { border-color: #e11d48; transform: translateY(-8px); box-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.3); }
         .accent-line { width: 40px; height: 4px; background: #e11d48; border-radius: 2px; }
         .timeline-dot { width: 12px; height: 12px; background: #e11d48; border-radius: 50%; position: absolute; left: -31px; top: 8px; box-shadow: 0 0 10px #e11d48; }
+        .btn-glow:hover { text-shadow: 0 0 8px rgba(225, 29, 72, 0.8); color: #e11d48; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <header class="max-w-4xl mx-auto mb-16">
-        <h1 class="font-sync text-4xl md:text-5xl tracking-tighter mb-4 text-gradient uppercase">MOCH ADHIMAS <br> ABHIMATA</h1>
+    <header class="max-w-4xl mx-auto mb-16" data-aos="fade-down">
+        <h1 class="font-sync text-4xl md:text-5xl tracking-tighter mb-4 text-gradient uppercase leading-tight">MOCH ADHIMAS <br> ABHIMATA</h1>
         <div class="accent-line mb-4"></div>
-        <p class="text-zinc-500 font-bold tracking-widest text-xs uppercase text-rose-600">Warehouse Specialist | JKT-JKT03A</p>
+        <p class="text-rose-600 font-bold tracking-widest text-xs uppercase">Warehouse Specialist | JKT-JKT03A</p>
     </header>
 
-    <main class="max-w-4xl mx-auto space-y-20">
+    <main class="max-w-4xl mx-auto space-y-24">
         
-        <section>
+        <section data-aos="fade-up">
             <h2 class="font-sync text-sm mb-6 text-zinc-600 tracking-[0.3em] uppercase">// Summary</h2>
             <p class="text-zinc-400 leading-relaxed text-lg">
-                Profesional di bidang logistik dengan spesialisasi <span class="text-white">Inventory Control</span> dan <span class="text-white">Manajemen Gudang</span>. Terbiasa mengelola operasional harian, akurasi stok 100%, hingga kepemimpinan tim untuk efisiensi distribusi produk elektronik dan retail.
+                Profesional di bidang logistik dengan spesialisasi <span class="text-white font-semibold">Inventory Control</span> dan <span class="text-white font-semibold">Manajemen Gudang</span>. Terbiasa menangani akurasi stok tinggi dan efisiensi operasional di perusahaan teknologi & retail.
             </p>
         </section>
 
         <section id="experience">
-            <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase">// Professional Journey</h2>
-            
+            <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Professional Journey</h2>
             <div class="relative ml-6 border-l border-zinc-800 space-y-12">
                 
-                <div class="relative pl-8">
+                <div class="relative pl-8" data-aos="fade-left">
                     <div class="timeline-dot"></div>
                     <div class="card-dark p-6">
                         <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase">Admin Warehouse (Supervisor Role)</h3>
-                            <span class="text-xs text-rose-600 font-mono font-bold">Juli 2025 - Sekarang</span>
+                            <h3 class="text-xl font-bold uppercase">Admin Warehouse</h3>
+                            <span class="text-xs text-rose-600 font-mono font-bold uppercase">Juli 2025 - Sekarang</span>
                         </div>
                         <p class="text-zinc-300 font-semibold mb-3">PT Agres Info Technology</p>
                         <ul class="text-zinc-500 text-sm space-y-2">
-                            <li>• Mengelola administrasi penjualan & operasional gudang terintegrasi.</li>
-                            <li>• Stock Opname mingguan/bulanan untuk sinkronisasi fisik vs sistem 100%.</li>
-                            <li>• Mengatur mutasi barang antar gudang guna menjaga ketersediaan stok.</li>
-                            <li>• Menyusun laporan penjualan & analisis data untuk manajemen.</li>
+                            <li>• Mengelola operasional & administrasi gudang Division 03 OLP secara terpadu.</li>
+                            <li>• Menjamin sinkronisasi data fisik dan sistem 100% melalui Stock Opname rutin.</li>
+                            <li>• Mengatur mutasi barang antar titik distribusi untuk menjaga ketersediaan stok.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="relative pl-8">
+                <div class="relative pl-8" data-aos="fade-left" data-aos-delay="100">
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6 border-zinc-800">
                         <div class="flex justify-between flex-wrap gap-2 mb-4">
                             <h3 class="text-xl font-bold uppercase text-zinc-300">Leader Team Inventory Control</h3>
-                            <span class="text-xs text-zinc-500 font-mono">Juni 2024 - Juli 2025</span>
+                            <span class="text-xs text-zinc-500 font-mono uppercase">2024 - 2025</span>
                         </div>
                         <p class="text-zinc-400 font-semibold mb-3">PT Astro Technologies Indonesia</p>
-                        <ul class="text-zinc-500 text-sm space-y-2">
-                            <li>• Memimpin & mengawasi staf IC dalam operasional harian.</li>
-                            <li>• Monitoring kualitas barang (WMS) & akurasi stok harian.</li>
-                            <li>• Memastikan fisik barang sesuai dokumen SO/PO saat Inbound/Outbound.</li>
-                        </ul>
+                        <p class="text-zinc-500 text-sm leading-relaxed">Memimpin operasional IC, monitoring WMS, dan memastikan kualitas barang Inbound/Outbound sesuai standar SO/PO.</p>
                     </div>
                 </div>
 
-                <div class="relative pl-8">
+                <div class="relative pl-8" data-aos="fade-left" data-aos-delay="200">
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6 border-zinc-800">
                         <div class="flex justify-between flex-wrap gap-2 mb-4">
                             <h3 class="text-xl font-bold uppercase text-zinc-300">Warehouse Incharge</h3>
-                            <span class="text-xs text-zinc-500 font-mono">April 2023 - April 2024</span>
+                            <span class="text-xs text-zinc-500 font-mono uppercase">2023 - 2024</span>
                         </div>
                         <p class="text-zinc-400 font-semibold mb-3">PT Porto Indonesia Sejahtera</p>
-                        <ul class="text-zinc-500 text-sm space-y-2">
-                            <li>• PIC Warehouse untuk pendataan arus masuk/keluar barang.</li>
-                            <li>• Stock Opname rutin & penataan layout gudang yang sistematis.</li>
-                            <li>• Meningkatkan efisiensi pencarian barang melalui reorganisasi gudang.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8">
-                    <div class="timeline-dot bg-zinc-700 shadow-none"></div>
-                    <div class="card-dark p-6 border-zinc-800">
-                        <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase text-zinc-300">Staff Warehouse & Admin Marketplace</h3>
-                            <span class="text-xs text-zinc-500 font-mono">Februari 2022 - Februari 2023</span>
-                        </div>
-                        <p class="text-zinc-400 font-semibold mb-3">PT Medika Sukses Tama</p>
-                        <ul class="text-zinc-500 text-sm space-y-2">
-                            <li>• Menangani Picking & Packing akurat berdasarkan SO/PO.</li>
-                            <li>• Melayani pelanggan marketplace & menangani administrasi pengiriman.</li>
-                        </ul>
+                        <p class="text-zinc-500 text-sm leading-relaxed">PIC Warehouse untuk arus masuk-keluar barang dan pengorganisasian layout gudang sistematis.</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card-dark p-8 border-rose-900/30">
-                <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">// Core Skills</h2>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Inventory Control</span>
-                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Stock Opname</span>
-                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">WMS (Sistem Gudang)</span>
-                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">Team Leadership</span>
-                    <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs rounded-full">MS Excel (Pivot/VLOOKUP)</span>
-                </div>
-            </div>
-            
-            <div class="card-dark p-8 border-zinc-800">
-                <h2 class="font-sync text-xs mb-6 text-zinc-500 tracking-widest uppercase">// Education</h2>
-                <h3 class="text-white font-bold">SMK Teknik PAL Surabaya</h3>
-                <p class="text-zinc-500 text-sm mt-1">Lulusan 2021</p>
-            </div>
-        </section>
-
-   <section id="digital-habit">
-            <h2 class="font-sync text-sm mb-8 text-zinc-600 tracking-[0.3em] uppercase">// Digital Habit</h2>
+        <section id="digital-habit">
+            <h2 class="font-sync text-sm mb-8 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Digital Habit</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <div class="card-dark p-6 border-zinc-800">
-                    <div class="text-rose-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-bold mb-2">Data Precision</h4>
-                    <p class="text-zinc-500 text-xs leading-relaxed">Mengolah ribuan baris data stok di Agres.id menggunakan MS Excel (Pivot/VLOOKUP) untuk memastikan zero-error pada laporan harian.</p>
+                <div class="card-dark p-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-rose-600 mb-4 font-bold text-2xl">01</div>
+                    <h4 class="text-white font-bold mb-2 uppercase text-xs">Data Analytics</h4>
+                    <p class="text-zinc-500 text-xs">Optimasi laporan stok menggunakan Excel Pivot & VLOOKUP.</p>
                 </div>
-
-                <div class="card-dark p-6 border-zinc-800">
-                    <div class="text-rose-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-bold mb-2">Web Archive</h4>
-                    <p class="text-zinc-500 text-xs leading-relaxed">Membangun portofolio digital berbasis GitHub Pages untuk mendokumentasikan perjalanan karier secara transparan dan profesional.</p>
+                <div class="card-dark p-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-rose-600 mb-4 font-bold text-2xl">02</div>
+                    <h4 class="text-white font-bold mb-2 uppercase text-xs">Modern Archive</h4>
+                    <p class="text-zinc-500 text-xs">Manajemen portofolio digital berbasis GitHub Pages.</p>
                 </div>
-
-                <div class="card-dark p-6 border-zinc-800">
-                    <div class="text-rose-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-white font-bold mb-2">HD Visuals</h4>
-                    <p class="text-zinc-500 text-xs leading-relaxed">Pemanfaatan mobile photography iPhone untuk dokumentasi aset gudang dengan standar resolusi tinggi guna akurasi laporan fisik.</p>
+                <div class="card-dark p-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-rose-600 mb-4 font-bold text-2xl">03</div>
+                    <h4 class="text-white font-bold mb-2 uppercase text-xs">Visual Detail</h4>
+                    <p class="text-zinc-500 text-xs">Dokumentasi HD aset gudang menggunakan iPhone 13 Pro Max.</p>
                 </div>
-
             </div>
         </section>
 
-    <footer class="max-w-4xl mx-auto mt-32 pb-20 border-t border-zinc-900 pt-10 text-center">
-        <div class="flex flex-wrap justify-center gap-8 mb-8 text-xs font-bold uppercase tracking-widest">
-            <a href="mailto:bhimamas@gmail.com" class="hover:text-rose-600 transition">Email</a>
-            <a href="https://wa.me/6285770840298" class="hover:text-rose-600 transition">WhatsApp</a>
-            <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" class="hover:text-rose-600 transition">LinkedIn</a>
+    </main>
+
+    <footer class="max-w-4xl mx-auto mt-32 pb-20 border-t border-zinc-900 pt-10 text-center" data-aos="fade-up">
+        <div class="flex flex-wrap justify-center gap-8 mb-8 text-xs font-bold uppercase tracking-[0.2em]">
+            <a href="mailto:bhimamas@gmail.com" class="btn-glow transition">Email</a>
+            <a href="https://wa.me/6285770840298" target="_blank" class="btn-glow transition">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition">LinkedIn</a>
         </div>
-        <p class="text-zinc-700 text-[10px] font-sync uppercase tracking-widest">© 2026 MOCH ADHIMAS ABHIMATA - ARCHIVE 03</p>
+        <p class="text-zinc-700 text-[10px] font-sync uppercase tracking-[0.4em]">© 2026 ABHIMATA ARCHIVE - V.2.1</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 </html>
