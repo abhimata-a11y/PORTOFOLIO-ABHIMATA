@@ -57,7 +57,9 @@
     </style>
 </head>
 <body class="p-6 md:p-12">
-
+<div class="fixed top-0 left-0 w-full h-[3px] z-[10000]">
+        <div id="scrollBar" class="h-full bg-rose-600 shadow-[0_0_15px_#e11d48] w-0"></div>
+    </div>
     <div id="spotlight"></div>
 
     <header class="max-w-4xl mx-auto mb-20 float-header" data-aos="fade-down">
@@ -231,5 +233,21 @@
             spotlight.style.setProperty('--y', e.clientY + 'px');
         });
     </script>
-</body>
+<script>
+        // Script tambahan buat Scroll Progress
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollBar").style.width = scrolled + "%";
+        };
+
+        // Script AOS & Spotlight yang udah ada tetep biarin ya
+        AOS.init({ duration: 800, once: true });
+        const spotlight = document.getElementById('spotlight');
+        window.addEventListener('mousemove', e => {
+            spotlight.style.setProperty('--x', e.clientX + 'px');
+            spotlight.style.setProperty('--y', e.clientY + 'px');
+        });
+    </script></body>
 </html>
