@@ -13,7 +13,7 @@
     <style>
         html { scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; position: relative; }
-        
+        #scrollBar { transition: width 0.1s ease-out; }
         #spotlight {
             position: fixed;
             top: 0; left: 0;
@@ -22,10 +22,8 @@
             background: radial-gradient(circle at var(--x) var(--y), rgba(225, 29, 72, 0.15) 0%, rgba(0,0,0,0) 50%);
             z-index: 9999;
         }
-
         .font-sync { font-family: 'Syncopate', sans-serif; }
         .text-gradient { background: linear-gradient(to right, #ffffff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
         .card-dark { 
             background: rgba(10, 10, 10, 0.8); 
             backdrop-filter: blur(10px);
@@ -38,34 +36,25 @@
             transform: translateY(-8px); 
             box-shadow: 0 10px 40px -10px rgba(225, 29, 72, 0.4);
         }
-
-        .company-logo {
-            width: 48px; height: 48px;
-            border-radius: 10px;
-            object-fit: contain;
-            background: #111;
-            padding: 4px;
-            border: 1px solid #222;
-        }
-
+        .company-logo { width: 48px; height: 48px; border-radius: 10px; object-fit: contain; background: #111; padding: 4px; border: 1px solid #222; }
         .accent-line { width: 40px; height: 4px; background: #e11d48; border-radius: 2px; }
         .timeline-dot { width: 12px; height: 12px; background: #e11d48; border-radius: 50%; position: absolute; left: -31px; top: 8px; box-shadow: 0 0 15px #e11d48; }
         .btn-glow:hover { text-shadow: 0 0 12px rgba(225, 29, 72, 1); color: #e11d48; }
-        
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .float-header { animation: float 4s ease-in-out infinite; }
     </style>
 </head>
 <body class="p-6 md:p-12">
-<div class="fixed top-0 left-0 w-full h-[3px] z-[10000]">
+
+    <div class="fixed top-0 left-0 w-full h-[3px] z-[10000]">
         <div id="scrollBar" class="h-full bg-rose-600 shadow-[0_0_15px_#e11d48] w-0"></div>
     </div>
+
     <div id="spotlight"></div>
 
     <header class="max-w-4xl mx-auto mb-20 float-header" data-aos="fade-down">
         <h1 class="font-sync text-4xl md:text-5xl tracking-tighter mb-4 text-gradient uppercase">MOCH ADHIMAS <br> ABHIMATA</h1>
         <div class="accent-line mb-4"></div>
-        
         <div class="flex items-center gap-3 mb-4">
             <span class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -73,9 +62,9 @@
             </span>
             <span class="text-[10px] text-zinc-500 font-mono uppercase tracking-[0.2em]">Ready for Next Challenge</span>
         </div>
-
-        <p class="text-rose-600 font-bold tracking-widest text-xs uppercase">Warehouse Specialist | Inventory Control Lead | Warehouse Administration</p>
+        <p class="text-rose-600 font-bold tracking-widest text-xs uppercase italic">Warehouse Specialist | Inventory Control Lead | Warehouse Administration</p>
     </header>
+
     <main class="max-w-4xl mx-auto space-y-24">
         
         <section id="experience">
@@ -96,10 +85,10 @@
                             </div>
                         </div>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Mengelola administrasi penjualan dan operasional gudang Division 03 OLP secara terintegrasi untuk memastikan kelancaran distribusi produk.</li>
+                            <li>• Mengelola administrasi penjualan dan operasional gudang Division 03 OLP secara terintegrasi.</li>
                             <li>• Melaksanakan Stock Opname mingguan dan bulanan guna menjamin sinkronisasi data fisik dan sistem tetap akurat 100%.</li>
                             <li>• Mengatur proses mutasi barang antar titik distribusi untuk menjaga ketersediaan stok yang optimal.</li>
-                            <li>• Menyusun laporan penjualan dan analisis data operasional harian untuk mendukung kebutuhan manajemen.</li>
+                            <li>• Menyusun laporan penjualan dan analisis data operasional harian.</li>
                         </ul>
                     </div>
                 </div>
@@ -119,8 +108,8 @@
                         </div>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
                             <li>• Memimpin staf IC dan mengawasi operasional harian gudang, termasuk proses Inbound dan Outbound.</li>
-                            <li>• Memastikan kuantitas dan kualitas fisik barang sesuai dengan dokumen SO/PO melalui pengecekan ketat.</li>
-                            <li>• Melakukan monitoring harian terhadap kondisi barang dan expired date berbasis sistem WMS.</li>
+                            <li>• Memastikan kuantitas dan kualitas fisik barang sesuai dokumen SO/PO melalui pengecekan ketat.</li>
+                            <li>• Monitoring harian terhadap kondisi barang dan expired date berbasis sistem WMS.</li>
                         </ul>
                     </div>
                 </div>
@@ -139,8 +128,8 @@
                             </div>
                         </div>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Bertanggung jawab sebagai Person in Charge (PIC) Warehouse untuk pendataan arus masuk dan keluar barang secara real-time.</li>
-                            <li>• Melakukan Stock Opname rutin serta optimalisasi layout gudang secara sistematis dan efisien.</li>
+                            <li>• Bertanggung jawab sebagai PIC Warehouse untuk pendataan arus masuk dan keluar barang real-time.</li>
+                            <li>• Melakukan Stock Opname rutin serta optimalisasi layout gudang secara sistematis.</li>
                         </ul>
                     </div>
                 </div>
@@ -159,73 +148,72 @@
                             </div>
                         </div>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Menangani Picking & Packing barang sesuai Sales Order (SO) dan Purchase Order (PO) dengan akurasi tinggi.</li>
-                            <li>• Admin Marketplace: Mengelola komunikasi pelanggan dan administrasi surat jalan pengiriman.</li>
+                            <li>• Menangani Picking & Packing barang sesuai Sales Order (SO) dan Purchase Order (PO).</li>
+                            <li>• Admin Marketplace: Mengelola komunikasi pelanggan dan administrasi surat jalan.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        section id="digital-habit">
+        <section id="digital-habit">
             <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Digital Habit</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
                 <div class="card-dark p-8" data-aos="zoom-in">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">WMS & Inventory System</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Monitoring mutu, tracking expired date, dan manajemen mutasi stok via sistem digital.</p>
+                    <p class="text-zinc-400 text-sm mb-6">Monitoring mutu, tracking expired date, dan manajemen mutasi stok via sistem digital.</p>
                     <div class="w-full bg-zinc-900 h-[2px] rounded-full overflow-hidden">
                         <div class="bg-rose-600 h-full w-[95%] shadow-[0_0_10px_#e11d48]"></div>
                     </div>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="100">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Advanced Excel Analysis</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Pivot Table & VLOOKUP untuk sinkronisasi audit fisik vs sistem serta laporan analisis penjualan.</p>
+                    <p class="text-zinc-400 text-sm mb-6">Pivot Table & VLOOKUP untuk sinkronisasi audit fisik vs sistem serta laporan analisis penjualan.</p>
                     <div class="w-full bg-zinc-900 h-[2px] rounded-full overflow-hidden">
                         <div class="bg-rose-600 h-full w-[90%] shadow-[0_0_10px_#e11d48]"></div>
                     </div>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="200">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Visual Standard</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Dokumentasi aset High-Definition untuk menjamin validitas laporan visual operasional.</p>
+                    <p class="text-zinc-400 text-sm mb-6">Dokumentasi aset High-Definition untuk menjamin validitas laporan visual operasional.</p>
                     <div class="w-full bg-zinc-900 h-[2px] rounded-full overflow-hidden">
                         <div class="bg-rose-600 h-full w-[85%] shadow-[0_0_10px_#e11d48]"></div>
                     </div>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="300">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Digital Archive</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Manajemen rekam jejak profesional melalui GitHub Pages dan optimalisasi profil LinkedIn.</p>
+                    <p class="text-zinc-400 text-sm mb-6">Manajemen rekam jejak profesional melalui GitHub Pages dan profil LinkedIn.</p>
                     <div class="w-full bg-zinc-900 h-[2px] rounded-full overflow-hidden">
                         <div class="bg-rose-600 h-full w-[80%] shadow-[0_0_10px_#e11d48]"></div>
                     </div>
                 </div>
-
             </div>
         </section>
 
     </main>
 
     <footer class="max-w-4xl mx-auto mt-32 pb-20 border-t border-zinc-900 pt-10 text-center" data-aos="fade-up">
-        
         <div class="mb-12">
             <a href="CV-Adhimas-Abhimata.pdf" download class="inline-block px-8 py-3 border border-rose-600 text-rose-600 font-sync text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-rose-600 hover:text-white hover:shadow-[0_0_20px_rgba(225,29,72,0.6)] transition-all duration-500">
                 Download Full Resume
             </a>
         </div>
-
         <div class="flex flex-wrap justify-center gap-10 mb-8 text-xs font-bold uppercase tracking-[0.3em]">
             <a href="https://wa.me/6285770840298" target="_blank" class="btn-glow transition text-rose-500">WhatsApp</a>
             <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition">LinkedIn</a>
             <a href="mailto:bhimamas@gmail.com" class="btn-glow transition text-zinc-400">Email</a>
         </div>
-        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.3.4</p>
+        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.3.6</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollBar").style.width = scrolled + "%";
+        };
         AOS.init({ duration: 800, once: true });
         const spotlight = document.getElementById('spotlight');
         window.addEventListener('mousemove', e => {
@@ -233,21 +221,5 @@
             spotlight.style.setProperty('--y', e.clientY + 'px');
         });
     </script>
-<script>
-        // Script tambahan buat Scroll Progress
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("scrollBar").style.width = scrolled + "%";
-        };
-
-        // Script AOS & Spotlight yang udah ada tetep biarin ya
-        AOS.init({ duration: 800, once: true });
-        const spotlight = document.getElementById('spotlight');
-        window.addEventListener('mousemove', e => {
-            spotlight.style.setProperty('--x', e.clientX + 'px');
-            spotlight.style.setProperty('--y', e.clientY + 'px');
-        });
-    </script></body>
+</body>
 </html>
