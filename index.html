@@ -14,7 +14,7 @@
         html { scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; position: relative; }
         
-        /* CSS: Spotlight Effect */
+        /* Javascript-driven Spotlight */
         #spotlight {
             position: fixed;
             top: 0; left: 0;
@@ -27,7 +27,6 @@
         .font-sync { font-family: 'Syncopate', sans-serif; }
         .text-gradient { background: linear-gradient(to right, #ffffff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* CSS: Glassmorphism */
         .card-dark { 
             background: rgba(10, 10, 10, 0.8); 
             backdrop-filter: blur(10px);
@@ -74,10 +73,10 @@
                         </div>
                         <p class="text-zinc-300 font-semibold mb-3">PT Agres Info Technology</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Mengelola administrasi penjualan dan operasional gudang secara terintegrasi untuk memastikan kelancaran distribusi produk.</li>
-                            <li>• Melaksanakan Stock Opname mingguan dan bulanan untuk menjamin sinkronisasi data fisik dan sistem 100%.</li>
-                            <li>• Mengatur proses mutasi barang antar gudang guna menjaga ketersediaan stok di berbagai titik distribusi.</li>
-                            <li>• Menyusun laporan penjualan dan analisis data operasional untuk mendukung pengambilan keputusan tim manajemen.</li>
+                            <li>• Mengelola administrasi penjualan dan operasional gudang Division 03 OLP secara terintegrasi untuk memastikan kelancaran distribusi produk.</li>
+                            <li>• Melaksanakan Stock Opname mingguan dan bulanan guna menjamin sinkronisasi data fisik dan sistem tetap akurat 100%.</li>
+                            <li>• Mengatur proses mutasi barang antar titik distribusi untuk menjaga ketersediaan stok yang optimal.</li>
+                            <li>• Menyusun laporan penjualan dan analisis data operasional harian untuk mendukung kebutuhan manajemen.</li>
                         </ul>
                     </div>
                 </div>
@@ -91,10 +90,9 @@
                         </div>
                         <p class="text-zinc-400 font-semibold mb-3">PT Astro Technologies Indonesia</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Memimpin dan mengawasi kinerja staf Inventory Control dalam menjalankan operasional harian gudang.</li>
-                            <li>• Mengawasi proses Inbound dan Outbound, memastikan kuantitas dan fisik barang sesuai dengan dokumen SO/PO.</li>
-                            <li>• Melakukan monitoring harian terhadap kualitas barang (expired date & kondisi kemasan) berbasis sistem WMS.</li>
-                            <li>• Bertanggung jawab atas akurasi stok harian melalui prosedur pengecekan ketat.</li>
+                            <li>• Memimpin staf IC dan mengawasi operasional harian gudang, termasuk proses Inbound dan Outbound.</li>
+                            <li>• Memastikan kuantitas dan kualitas fisik barang sesuai dengan dokumen SO/PO melalui pengecekan ketat.</li>
+                            <li>• Melakukan monitoring harian terhadap kondisi barang dan expired date berbasis sistem WMS.</li>
                         </ul>
                     </div>
                 </div>
@@ -108,9 +106,8 @@
                         </div>
                         <p class="text-zinc-400 font-semibold mb-3">PT Porto Indonesia Sejahtera</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Bertanggung jawab sebagai Person in Charge (PIC) Warehouse untuk pendataan arus masuk dan keluar barang.</li>
-                            <li>• Melakukan Stock Opname rutin dan memastikan penataan stok (layouting) gudang dilakukan secara rapi dan sistematis.</li>
-                            <li>• Meningkatkan efisiensi pencarian barang dengan pengorganisasian gudang yang lebih baik.</li>
+                            <li>• Bertindak sebagai PIC Warehouse untuk pendataan arus masuk dan keluar barang secara real-time.</li>
+                            <li>• Melakukan Stock Opname rutin serta optimalisasi layout gudang secara sistematis dan efisien.</li>
                         </ul>
                     </div>
                 </div>
@@ -124,25 +121,55 @@
                         </div>
                         <p class="text-zinc-400 font-semibold mb-3">PT Medika Sukses Tama</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Menangani proses Picking dan Packing sesuai dengan Sales Order (SO) dan Purchase Order (PO) secara akurat.</li>
-                            <li>• Bertindak sebagai Admin Marketplace untuk melayani komunikasi pelanggan dan menangani surat jalan pengiriman offline.</li>
+                            <li>• Menangani Picking & Packing barang sesuai Sales Order (SO) dan Purchase Order (PO) dengan akurasi tinggi.</li>
+                            <li>• Admin Marketplace: Mengelola komunikasi pelanggan dan administrasi surat jalan pengiriman.</li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section id="digital-habit">
-            <h2 class="font-sync text-sm mb-8 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Digital Habit</h2>
+            <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Digital Habit</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
                 <div class="card-dark p-8" data-aos="zoom-in">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">WMS & Inventory System</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Terbiasa mengoperasikan Warehouse Management System (WMS) untuk monitoring kualitas barang, tracking expired date, dan manajemen mutasi stok antar gudang.</p>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Expert dalam operasional <strong>Warehouse Management System (WMS)</strong> untuk kontrol kualitas, pelacakan expired date, dan manajemen mutasi stok digital.</p>
+                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">STOCK FLOW</span>
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">SOP COMPLIANCE</span>
+                    </div>
                 </div>
+
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="100">
-                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Advanced Excel</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Expert dalam penggunaan Pivot Table & VLOOKUP untuk audit sinkronisasi data fisik vs sistem serta penyusunan laporan analisis penjualan.</p>
+                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Advanced Excel Analysis</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Penggunaan <strong>Pivot Table & VLOOKUP</strong> untuk sinkronisasi audit fisik vs sistem serta pembuatan dashboard laporan penjualan bulanan.</p>
+                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">DATA AUDIT</span>
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">VLOOKUP / PIVOT</span>
+                    </div>
                 </div>
+
+                <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="200">
+                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Visual Standard (iPhone)</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Dokumentasi aset dan kondisi barang menggunakan standar <strong>High-Definition</strong> untuk menjamin validitas laporan visual operasional.</p>
+                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">HD ASSET LOGS</span>
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">VISUAL ACCURACY</span>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="300">
+                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Digital Archive & Networking</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Pemanfaatan <strong>GitHub Pages</strong> untuk portofolio transparan dan optimalisasi profil LinkedIn guna membangun kredibilitas profesional.</p>
+                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">GITHUB PAGES</span>
+                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">LINKEDIN READY</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -154,12 +181,13 @@
             <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition">LinkedIn</a>
             <a href="mailto:bhimamas@gmail.com" class="btn-glow transition">Email</a>
         </div>
-        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.2.5</p>
+        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.2.7</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+        // Spotlight JS
         const spotlight = document.getElementById('spotlight');
         window.addEventListener('mousemove', e => {
             spotlight.style.setProperty('--x', e.clientX + 'px');
