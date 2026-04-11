@@ -14,7 +14,6 @@
         html { scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; position: relative; }
         
-        /* Javascript-driven Spotlight */
         #spotlight {
             position: fixed;
             top: 0; left: 0;
@@ -40,6 +39,15 @@
             box-shadow: 0 10px 40px -10px rgba(225, 29, 72, 0.4);
         }
 
+        .company-logo {
+            width: 48px; height: 48px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #111;
+            padding: 4px;
+            border: 1px solid #222;
+        }
+
         .accent-line { width: 40px; height: 4px; background: #e11d48; border-radius: 2px; }
         .timeline-dot { width: 12px; height: 12px; background: #e11d48; border-radius: 50%; position: absolute; left: -31px; top: 8px; box-shadow: 0 0 15px #e11d48; }
         .btn-glow:hover { text-shadow: 0 0 12px rgba(225, 29, 72, 1); color: #e11d48; }
@@ -55,7 +63,7 @@
     <header class="max-w-4xl mx-auto mb-20 float-header" data-aos="fade-down">
         <h1 class="font-sync text-4xl md:text-5xl tracking-tighter mb-4 text-gradient uppercase">MOCH ADHIMAS <br> ABHIMATA</h1>
         <div class="accent-line mb-4"></div>
-        <p class="text-rose-600 font-bold tracking-widest text-xs uppercase">Warehouse Specialist | Inventory Control Lead | Warehouse Administrasi</p>
+        <p class="text-rose-600 font-bold tracking-widest text-xs uppercase">Warehouse Specialist | JKT-JKT03A</p>
     </header>
 
     <main class="max-w-4xl mx-auto space-y-24">
@@ -67,11 +75,16 @@
                 <div class="relative pl-8" data-aos="fade-left">
                     <div class="timeline-dot"></div>
                     <div class="card-dark p-6">
-                        <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase">Admin Warehouse</h3>
-                            <span class="text-xs text-rose-600 font-mono font-bold uppercase">28 Juli 2025 - Sekarang</span>
+                        <div class="flex items-start gap-4 mb-4">
+                            <img src="Logo-Agres.png" class="company-logo" alt="Agres" onerror="this.src='https://ui-avatars.com/api/?name=Agres&background=e11d48&color=fff'">
+                            <div class="flex-1">
+                                <div class="flex justify-between flex-wrap gap-2">
+                                    <h3 class="text-xl font-bold uppercase">Admin Warehouse</h3>
+                                    <span class="text-xs text-rose-600 font-mono font-bold uppercase">28 Juli 2025 - Sekarang</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm font-semibold">PT Agres Info Technology</p>
+                            </div>
                         </div>
-                        <p class="text-zinc-300 font-semibold mb-3">PT Agres Info Technology</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
                             <li>• Mengelola administrasi penjualan dan operasional gudang Division 03 OLP secara terintegrasi untuk memastikan kelancaran distribusi produk.</li>
                             <li>• Melaksanakan Stock Opname mingguan dan bulanan guna menjamin sinkronisasi data fisik dan sistem tetap akurat 100%.</li>
@@ -84,15 +97,21 @@
                 <div class="relative pl-8" data-aos="fade-left" data-aos-delay="100">
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
-                        <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase text-zinc-300">Leader Team Inventory Control</h3>
-                            <span class="text-xs text-zinc-500 font-mono uppercase">26 Juni 2024 - 20 Juli 2025</span>
+                        <div class="flex items-start gap-4 mb-4">
+                            <img src="logo-astro.png" class="company-logo" alt="Astro" onerror="this.src='https://ui-avatars.com/api/?name=Astro&background=333&color=fff'">
+                            <div class="flex-1">
+                                <div class="flex justify-between flex-wrap gap-2">
+                                    <h3 class="text-xl font-bold uppercase text-zinc-300">Leader Team Inventory Control</h3>
+                                    <span class="text-xs text-zinc-500 font-mono uppercase">26 Juni 2024 - 20 Juli 2025</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm font-semibold">PT Astro Technologies Indonesia</p>
+                            </div>
                         </div>
-                        <p class="text-zinc-400 font-semibold mb-3">PT Astro Technologies Indonesia</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
                             <li>• Memimpin staf IC dan mengawasi operasional harian gudang, termasuk proses Inbound dan Outbound.</li>
                             <li>• Memastikan kuantitas dan kualitas fisik barang sesuai dengan dokumen SO/PO melalui pengecekan ketat.</li>
                             <li>• Melakukan monitoring harian terhadap kondisi barang dan expired date berbasis sistem WMS.</li>
+                            <li>• Bertanggung jawab atas akurasi stok harian melalui prosedur pengecekan ketat.</li>
                         </ul>
                     </div>
                 </div>
@@ -100,14 +119,20 @@
                 <div class="relative pl-8" data-aos="fade-left" data-aos-delay="200">
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
-                        <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase text-zinc-300">Warehouse Incharge</h3>
-                            <span class="text-xs text-zinc-500 font-mono uppercase">05 April 2023 - 03 April 2024</span>
+                        <div class="flex items-start gap-4 mb-4">
+                            <img src="logo-porto.png" class="company-logo" alt="Porto" onerror="this.src='https://ui-avatars.com/api/?name=Porto&background=333&color=fff'">
+                            <div class="flex-1">
+                                <div class="flex justify-between flex-wrap gap-2">
+                                    <h3 class="text-xl font-bold uppercase text-zinc-300">Warehouse Incharge</h3>
+                                    <span class="text-xs text-zinc-500 font-mono uppercase">05 April 2023 - 03 April 2024</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm font-semibold">PT Porto Indonesia Sejahtera</p>
+                            </div>
                         </div>
-                        <p class="text-zinc-400 font-semibold mb-3">PT Porto Indonesia Sejahtera</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
-                            <li>• Bertindak sebagai PIC Warehouse untuk pendataan arus masuk dan keluar barang secara real-time.</li>
+                            <li>• Bertanggung jawab sebagai Person in Charge (PIC) Warehouse untuk pendataan arus masuk dan keluar barang secara real-time.</li>
                             <li>• Melakukan Stock Opname rutin serta optimalisasi layout gudang secara sistematis dan efisien.</li>
+                            <li>• Meningkatkan efisiensi pencarian barang dengan pengorganisasian gudang yang lebih baik.</li>
                         </ul>
                     </div>
                 </div>
@@ -115,61 +140,44 @@
                 <div class="relative pl-8" data-aos="fade-left" data-aos-delay="300">
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
-                        <div class="flex justify-between flex-wrap gap-2 mb-4">
-                            <h3 class="text-xl font-bold uppercase text-zinc-300">Staff Warehouse</h3>
-                            <span class="text-xs text-zinc-500 font-mono uppercase">14 Feb 2022 - 01 Feb 2023</span>
+                        <div class="flex items-start gap-4 mb-4">
+                            <img src="logo-medika.png" class="company-logo" alt="Medika" onerror="this.src='https://ui-avatars.com/api/?name=Medika&background=333&color=fff'">
+                            <div class="flex-1">
+                                <div class="flex justify-between flex-wrap gap-2">
+                                    <h3 class="text-xl font-bold uppercase text-zinc-300">Staff Warehouse</h3>
+                                    <span class="text-xs text-zinc-500 font-mono uppercase">14 Feb 2022 - 01 Feb 2023</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm font-semibold">PT Medika Sukses Tama</p>
+                            </div>
                         </div>
-                        <p class="text-zinc-400 font-semibold mb-3">PT Medika Sukses Tama</p>
                         <ul class="text-zinc-500 text-sm space-y-2 leading-relaxed">
                             <li>• Menangani Picking & Packing barang sesuai Sales Order (SO) dan Purchase Order (PO) dengan akurasi tinggi.</li>
                             <li>• Admin Marketplace: Mengelola komunikasi pelanggan dan administrasi surat jalan pengiriman.</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <section id="digital-habit">
             <h2 class="font-sync text-sm mb-12 text-zinc-600 tracking-[0.3em] uppercase" data-aos="fade-right">// Digital Habit</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
                 <div class="card-dark p-8" data-aos="zoom-in">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">WMS & Inventory System</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Expert dalam operasional <strong>Warehouse Management System (WMS)</strong> untuk kontrol kualitas, pelacakan expired date, dan manajemen mutasi stok digital.</p>
-                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">STOCK FLOW</span>
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">SOP COMPLIANCE</span>
-                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Monitoring mutu, tracking expired date, dan manajemen mutasi stok via sistem digital.</p>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="100">
                     <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Advanced Excel Analysis</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Penggunaan <strong>Pivot Table & VLOOKUP</strong> untuk sinkronisasi audit fisik vs sistem serta pembuatan dashboard laporan penjualan bulanan.</p>
-                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">DATA AUDIT</span>
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">VLOOKUP / PIVOT</span>
-                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Pivot Table & VLOOKUP untuk sinkronisasi audit fisik vs sistem serta laporan analisis penjualan.</p>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="200">
-                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Visual Standard</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Dokumentasi aset dan kondisi barang menggunakan standar <strong>High-Definition</strong> untuk menjamin validitas laporan visual operasional.</p>
-                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">HD ASSET LOGS</span>
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">VISUAL ACCURACY</span>
-                    </div>
+                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Visual Standard (iPhone)</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Dokumentasi aset High-Definition untuk menjamin validitas laporan visual operasional.</p>
                 </div>
-
                 <div class="card-dark p-8" data-aos="zoom-in" data-aos-delay="300">
-                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Digital Archive & Networking</h4>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Pemanfaatan <strong>GitHub Pages</strong> untuk portofolio transparan dan optimalisasi profil LinkedIn guna membangun kredibilitas profesional.</p>
-                    <div class="flex flex-wrap gap-2 text-[9px] font-bold">
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">GITHUB PAGES</span>
-                        <span class="bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full">LINKEDIN READY</span>
-                    </div>
+                    <h4 class="text-rose-600 font-bold mb-4 uppercase text-xs tracking-widest">Digital Archive</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">Manajemen rekam jejak profesional melalui GitHub Pages dan optimalisasi profil LinkedIn.</p>
                 </div>
-
             </div>
         </section>
 
@@ -179,15 +187,13 @@
         <div class="flex flex-wrap justify-center gap-10 mb-8 text-xs font-bold uppercase tracking-[0.3em]">
             <a href="https://wa.me/6285770840298" target="_blank" class="btn-glow transition text-rose-500">WhatsApp</a>
             <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition">LinkedIn</a>
-            <a href="mailto:bhimamas@gmail.com" class="btn-glow transition">Email</a>
         </div>
-        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.2.7</p>
+        <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.2.9</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
-        // Spotlight JS
         const spotlight = document.getElementById('spotlight');
         window.addEventListener('mousemove', e => {
             spotlight.style.setProperty('--x', e.clientX + 'px');
