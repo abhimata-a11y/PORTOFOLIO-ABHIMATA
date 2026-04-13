@@ -347,24 +347,44 @@
         item.addEventListener('click', function(e) {
             e.preventDefault();
             const fullImage = this.getAttribute('href');
-            const description = this.getAttribute('data-desc') || "Operational documentation.";
+            const description = this.getAttribute('data-desc');
+            const isMissing = this.getAttribute('data-status') === 'missing';
 
             const overlay = document.createElement('div');
             overlay.className = "fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-6 animate-fade-in";
             overlay.style.backdropFilter = "blur(12px)";
 
-            overlay.innerHTML = `
-                <div class="relative max-w-4xl w-full flex flex-col items-center bg-[#0a0a0a] border border-zinc-900 rounded-3xl p-6 shadow-2xl">
-                    <button id="closeModal" class="absolute -top-4 -right-4 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold hover:bg-rose-600 hover:text-white transition-all">×</button>
-                    
-                    <img src="${fullImage}" 
-                         class="max-w-full max-h-[65vh] rounded-xl border border-zinc-800 object-contain mb-6"
-                         onerror="this.parentElement.innerHTML += '<p class=text-rose-500>Gagal memuat gambar. Cek nama file di href!</p>'">
-                    
-                    <div class="text-center">
-                        <p class="font-sync text-[9px] text-rose-600 tracking-[0.3em] uppercase mb-2">// Operational Report</p>
-                        <p class="text-zinc-300 text-sm font-light px-4">${description}</p>
+            // Content logic
+            let content = '';
+            if (isMissing) {
+                // Tampilan kalau dokumentasi hilang (Jujur & Profesional)
+                content = `
+                    <div class="flex flex-col items-center text-center p-12 border border-dashed border-zinc-800 rounded-3xl bg-zinc-950/50">
+                        <div class="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800">
+                            <span class="text-zinc-500 text-2xl">?</span>
+                        </div>
+                        <h3 class="font-sync text-[10px] text-rose-600 tracking-[0.4em] uppercase mb-4">// Data Not Found</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed max-w-sm mb-8 italic">"${description}"</p>
+                        <p class="text-zinc-600 font-mono text-[8px] tracking-[0.2em] uppercase">[ INTERNAL ARCHIVE RECOVERY FAILED ]</p>
                     </div>
+                `;
+            } else {
+                // Tampilan normal kalau ada foto
+                content = `
+                    <div class="relative max-w-4xl w-full flex flex-col items-center">
+                        <img src="${fullImage}" class="max-w-full max-h-[70vh] rounded-2xl border border-zinc-800 object-contain shadow-2xl">
+                        <div class="mt-8 text-center">
+                            <p class="font-sync text-[9px] text-rose-600 tracking-[0.3em] uppercase mb-2">// Operational Report</p>
+                            <p class="text-zinc-300 text-sm font-light px-4">${description}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            overlay.innerHTML = `
+                <div class="relative max-w-4xl w-full flex flex-col items-center animate-zoom-in">
+                    <button id="closeModal" class="absolute -top-12 right-0 md:-right-12 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold hover:bg-rose-600 hover:text-white transition-all">×</button>
+                    ${content}
                 </div>
             `;
 
