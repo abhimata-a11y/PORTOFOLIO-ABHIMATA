@@ -343,53 +343,37 @@
 <script>
     document.querySelectorAll('.logo-item').forEach(item => {
         item.addEventListener('click', function(e) {
-            e.preventDefault(); // Biar GAK buka tab baru/alamat mentah
-            
+            e.preventDefault();
             const fullImage = this.getAttribute('href');
-            const description = this.getAttribute('data-desc') || "Operational Field documentation."; // Ambil teks deskripsi
+            const description = this.getAttribute('data-desc') || "Operational documentation.";
 
-            // Bikin Jendela Pop-up (Overlay) - Pakai Tailwind
             const overlay = document.createElement('div');
             overlay.className = "fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-6 animate-fade-in";
-            overlay.style.backdropFilter = "blur(12px)"; // Blur background web
+            overlay.style.backdropFilter = "blur(12px)";
 
-            // HTML Jendela Modalnya
             overlay.innerHTML = `
-                <div class="relative max-w-5xl w-full flex flex-col items-center card-dark border border-zinc-900 rounded-3xl p-8" data-aos="zoom-in" data-aos-duration="400">
+                <div class="relative max-w-4xl w-full flex flex-col items-center bg-[#0a0a0a] border border-zinc-900 rounded-3xl p-6 shadow-2xl">
+                    <button id="closeModal" class="absolute -top-4 -right-4 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold hover:bg-rose-600 hover:text-white transition-all">×</button>
                     
-                    <button id="closeModal" class="absolute -top-4 -right-4 w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold text-xl cursor-pointer hover:bg-rose-600 hover:text-white transition-all duration-300">
-                        ×
-                    </button>
-
-                    <img src="${fullImage}" class="max-w-full max-h-[70vh] rounded-2xl shadow-2xl border border-zinc-800 object-contain mb-8">
+                    <img src="${fullImage}" 
+                         class="max-w-full max-h-[65vh] rounded-xl border border-zinc-800 object-contain mb-6"
+                         onerror="this.parentElement.innerHTML += '<p class=text-rose-500>Gagal memuat gambar. Cek nama file di href!</p>'">
                     
-                    <div class="text-center max-w-3xl">
-                        <p class="font-sync text-[10px] text-rose-600 tracking-[0.4em] uppercase mb-3">// Field Operations Documentation</p>
-                        <p class="text-zinc-200 text-base leading-relaxed font-normal">${description}</p>
-                        <p class="mt-8 text-zinc-700 font-mono text-[9px] tracking-[0.2em] uppercase">[ ABHIMATA PROTOCOL PROTOCOL ]</p>
+                    <div class="text-center">
+                        <p class="font-sync text-[9px] text-rose-600 tracking-[0.3em] uppercase mb-2">// Operational Report</p>
+                        <p class="text-zinc-300 text-sm font-light px-4">${description}</p>
                     </div>
                 </div>
             `;
 
             document.body.appendChild(overlay);
-            document.body.style.overflow = 'hidden'; // Stop scrolling web utama
+            document.body.style.overflow = 'hidden';
 
-            // FUNGSI CLOSE
-            const closeModal = () => {
-                overlay.remove();
-                document.body.style.overflow = 'auto'; // Aktifin scroll kembali
-            };
-
-            // Klik 'X' buat Close
-            overlay.querySelector('#closeModal').onclick = closeModal;
-
-            // Klik di luar area modal buat Close
-            overlay.onclick = (e) => {
-                if (e.target === overlay) { closeModal(); }
-            };
+            const close = () => { overlay.remove(); document.body.style.overflow = 'auto'; };
+            overlay.querySelector('#closeModal').onclick = close;
+            overlay.onclick = (e) => { if(e.target === overlay) close(); };
         });
     });
 </script>
-    
 </body>
 </html>
