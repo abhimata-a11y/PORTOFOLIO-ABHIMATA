@@ -19,7 +19,7 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             pointer-events: none;
-            background: radial-gradient(circle at var(--x) var(--y), rgba(225, 29, 72, 0.15) 0%, rgba(0,0,0,0) 50%);
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(225, 29, 72, 0.15) 0%, rgba(0,0,0,0) 50%);
             z-index: 9999;
         }
         .font-sync { font-family: 'Syncopate', sans-serif; }
@@ -39,15 +39,13 @@
         .group:hover .text-rose-600 {
             text-shadow: 0 0 15px rgba(225, 29, 72, 0.8);
         }
-        .group:hover {
-            box-shadow: 0 0 30px -10px rgba(225, 29, 72, 0.2);
-        }
         .company-logo { width: 48px; height: 48px; border-radius: 10px; object-fit: contain; background: #111; padding: 4px; border: 1px solid #222; }
         .accent-line { width: 40px; height: 4px; background: #e11d48; border-radius: 2px; }
         .timeline-dot { width: 12px; height: 12px; background: #e11d48; border-radius: 50%; position: absolute; left: -31px; top: 8px; box-shadow: 0 0 15px #e11d48; }
         .btn-glow:hover { text-shadow: 0 0 12px rgba(225, 29, 72, 1); color: #e11d48; }
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .float-header { animation: float 4s ease-in-out infinite; }
+        
         /* --- SECTION LOGO PT --- */
         .logo-grid {
             display: grid;
@@ -66,6 +64,7 @@
             justify-content: center;
             overflow: hidden;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
         }
         .logo-item:hover {
             border-color: rgba(225, 29, 72, 0.3);
@@ -83,9 +82,39 @@
         }
         .pt-name { font-family: 'Syncopate', sans-serif; text-transform: uppercase; font-size: 8px; letter-spacing: 0.2em; color: #a1a1aa; margin-top: 12px; }
         .pt-role { font-size: 10px; color: #e11d48; font-style: italic; font-weight: 600; margin-top: 2px; }
+
+        /* Toast Popup */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #e11d48;
+            color: #fff;
+            text-align: center;
+            border-radius: 999px;
+            padding: 8px 16px;
+            position: fixed;
+            z-index: 10001;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: 0.2em;
+            box-shadow: 0 0 20px rgba(225, 29, 72, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
     </style>
 </head>
 <body class="p-6 md:p-12">
+
+    <!-- Toast Notification -->
+    <div id="toast">COPIED TO CLIPBOARD!</div>
 
     <div class="fixed top-0 left-0 w-full h-[3px] z-[10000]">
         <div id="scrollBar" class="h-full bg-rose-600 shadow-[0_0_15px_#e11d48] w-0"></div>
@@ -124,7 +153,7 @@
                     <div class="timeline-dot"></div>
                     <div class="card-dark p-6">
                         <div class="flex items-start gap-4 mb-4">
-                            <img src="Logo-Agres1.png" class="company-logo" alt="Agres" onerror="this.src='https://ui-avatars.com/api/?name=Agres&background=e11d48&color=fff'">
+                            <img src="Logo-Agres1.png" class="company-logo" alt="PT Agres Info Technology" onerror="this.src='https://ui-avatars.com/api/?name=Agres&background=e11d48&color=fff'">
                             <div class="flex-1">
                                 <div class="flex justify-between flex-wrap gap-2">
                                     <h3 class="text-xl font-bold uppercase">Admin Warehouse</h3>
@@ -146,7 +175,7 @@
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
                         <div class="flex items-start gap-4 mb-4">
-                            <img src="Logo-Astro.png" class="company-logo" alt="Astro" onerror="this.src='https://ui-avatars.com/api/?name=Astro&background=333&color=fff'">
+                            <img src="Logo-Astro.png" class="company-logo" alt="PT Astro Technologies Indonesia" onerror="this.src='https://ui-avatars.com/api/?name=Astro&background=333&color=fff'">
                             <div class="flex-1">
                                 <div class="flex justify-between flex-wrap gap-2">
                                     <h3 class="text-xl font-bold uppercase text-zinc-300">Leader Team Inventory Control</h3>
@@ -167,7 +196,7 @@
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
                         <div class="flex items-start gap-4 mb-4">
-                            <img src="Logo-Porto.png" class="company-logo" alt="Porto" onerror="this.src='https://ui-avatars.com/api/?name=Porto&background=333&color=fff'">
+                            <img src="Logo-Porto.png" class="company-logo" alt="PT Porto Indonesia Sejahtera" onerror="this.src='https://ui-avatars.com/api/?name=Porto&background=333&color=fff'">
                             <div class="flex-1">
                                 <div class="flex justify-between flex-wrap gap-2">
                                     <h3 class="text-xl font-bold uppercase text-zinc-300">Warehouse Incharge</h3>
@@ -187,7 +216,7 @@
                     <div class="timeline-dot bg-zinc-700 shadow-none"></div>
                     <div class="card-dark p-6">
                         <div class="flex items-start gap-4 mb-4">
-                            <img src="Logo-Medika.png" class="company-logo" alt="Medika" onerror="this.src='https://ui-avatars.com/api/?name=Medika&background=333&color=fff'">
+                            <img src="Logo-Medika.png" class="company-logo" alt="PT Medika Sukses Tama" onerror="this.src='https://ui-avatars.com/api/?name=Medika&background=333&color=fff'">
                             <div class="flex-1">
                                 <div class="flex justify-between flex-wrap gap-2">
                                     <h3 class="text-xl font-bold uppercase text-zinc-300">Staff Warehouse</h3>
@@ -212,19 +241,19 @@
             </div>
             
             <div class="flex flex-wrap gap-3">
-                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-green-500 transition-all">
+                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-green-500 transition-all cursor-default">
                     <span class="text-xs font-bold font-mono text-zinc-400 group-hover:text-green-500 transition-colors">Microsoft Excel</span>
                 </div>
-                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-rose-600 transition-all">
+                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-rose-600 transition-all cursor-default">
                     <span class="text-xs font-bold font-mono text-zinc-400 group-hover:text-rose-600 transition-colors">WMS Tracking</span>
                 </div>
-                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-blue-500 transition-all">
+                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-blue-500 transition-all cursor-default">
                     <span class="text-xs font-bold font-mono text-zinc-400 group-hover:text-blue-500 transition-colors">Inventory Control</span>
                 </div>
-                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-orange-500 transition-all">
+                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-orange-500 transition-all cursor-default">
                     <span class="text-xs font-bold font-mono text-zinc-400 group-hover:text-orange-500 transition-colors">ERP Systems</span>
                 </div>
-                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-purple-500 transition-all">
+                <div class="px-5 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full flex items-center gap-3 group hover:border-purple-500 transition-all cursor-default">
                     <span class="text-xs font-bold font-mono text-zinc-400 group-hover:text-purple-500 transition-colors">Digital Archiving</span>
                 </div>
             </div>
@@ -240,7 +269,7 @@
                     </div>
                     <div>
                         <h4 class="text-[10px] text-zinc-500 font-sync uppercase tracking-[0.2em] mb-1">Current Focus</h4>
-                        <p class="text-xs text-zinc-300 font-semibold italic">"Optimizing Distribution Flow & Digital Inventory Accuracy for 2026 Q2 targets."</p>
+                        <p class="text-xs text-zinc-300 font-semibold italic">"Optimizing Distribution Flow & Digital Inventory Accuracy for 2026 Q4 targets."</p>
                     </div>
                 </div>
             </div>
@@ -255,28 +284,28 @@
             <div class="logo-grid">
                 <div class="text-center" data-aos="zoom-in">
                     <a href="Aksi-Agres.jpeg" class="logo-item" data-desc="Audit Stock (Stock Opname) & Validasi Data WMS - Memastikan akurasi stok 100%.">
-                        <img src="Logo-Agres1.png" class="logo-img">
+                        <img src="Logo-Agres1.png" class="logo-img" alt="PT Agres Info Teknologi">
                     </a>
                     <p class="pt-name">PT Agres Info Teknologi</p>
                     <p class="pt-role">Warehouse Admin</p>
                 </div>
                 <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
                     <a href="Aksi-Astro.jpeg" class="logo-item group" data-desc="Monitoring alur picking barang dan optimasi area sorting untuk percepatan outbound. Fokus pada akurasi data di sistem Astro.">
-                        <img src="Logo-Astro.png" class="logo-img">
+                        <img src="Logo-Astro.png" class="logo-img" alt="Astro Technologies Indonesia">
                     </a>
                     <p class="pt-name">Astro Technologies Indonesia</p>
                     <p class="pt-role">Inventory Control Lead</p>
                 </div>
                 <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
                     <a href="#" class="logo-item group" data-status="missing" data-desc="Mohon maaf, dokumentasi visual untuk periode ini tidak tersedia karena kerusakan perangkat penyimpanan data lama. Fokus utama saya di sini Person in Charge (PIC) Warehouse untuk pendataan arus masuk dan keluar barang real-time.">
-                        <img src="Logo-Porto.png" class="logo-img">
+                        <img src="Logo-Porto.png" class="logo-img" alt="Porto Indonesia Sejahtera">
                     </a>
                     <p class="pt-name">Porto Indonesia Sejahtera</p>
                     <p class="pt-role">PIC Warehouse</p>
                 </div>
                 <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
                     <a href="#" class="logo-item group" data-status="missing" data-desc="Arsip dokumentasi fisik tidak tersedia. Selama masa jabatan ini, saya menjadi staff gudang biasa,dan juga Admin Marketplace.">
-                        <img src="Logo-Medika.png" class="logo-img">
+                        <img src="Logo-Medika.png" class="logo-img" alt="Medika Sukses Tama">
                     </a>
                     <p class="pt-name">Medika Sukses Tama</p>
                     <p class="pt-role">Staff Warehouse</p>
@@ -366,36 +395,52 @@
 
     <footer class="max-w-4xl mx-auto mt-32 pb-20 border-t border-zinc-900 pt-10 text-center" data-aos="fade-up">
         <div class="mb-12">
-            <a href="CV-Adhimas-Abhimata.pdf" download class="inline-block px-8 py-3 border border-rose-600 text-rose-600 font-sync text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-rose-600 hover:shadow-[0_0_20px_rgba(225,29,72,0.6)] transition-all">Download Full Resume</a>
+            <a href="CV-Adhimas-Abhimata.pdf" download class="inline-block px-8 py-3 border border-rose-600 text-rose-600 font-sync text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-rose-600 hover:text-white hover:shadow-[0_0_25px_rgba(225,29,72,0.8)] transition-all duration-300">Download Full Resume</a>
         </div>
         <div class="flex flex-wrap justify-center gap-10 mb-8 text-xs font-bold uppercase tracking-[0.3em]">
             <a href="https://wa.me/6285770840298" target="_blank" class="btn-glow transition text-rose-500">WhatsApp</a>
-            <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition">LinkedIn</a>
-            <a href="mailto:bhimamas@gmail.com" class="btn-glow transition text-zinc-400">Email</a>
+            <a href="https://www.linkedin.com/in/adhimas-abhimata-252480223/" target="_blank" class="btn-glow transition text-zinc-300">LinkedIn</a>
+            <button onclick="copyToClipboard('bhimamas@gmail.com')" class="btn-glow transition text-zinc-400 cursor-pointer">Email</button>
         </div>
         <p class="text-zinc-800 text-[9px] font-sync uppercase tracking-[0.5em]">© 2026 ABHIMATA ARCHIVE - V.3.9</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Live Time
         function updateTime() {
             const now = new Date();
             document.getElementById('liveTime').textContent = now.toLocaleTimeString('en-GB', { hour12: false });
         }
         setInterval(updateTime, 1000); updateTime();
+
+        // Scroll Progress Bar
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             document.getElementById("scrollBar").style.width = (winScroll / height) * 100 + "%";
         };
+
+        // Initialize AOS
         AOS.init({ duration: 800, once: true });
+
+        // Mouse Spotlight
         const spotlight = document.getElementById('spotlight');
         window.addEventListener('mousemove', e => {
             spotlight.style.setProperty('--x', e.clientX + 'px');
             spotlight.style.setProperty('--y', e.clientY + 'px');
         });
-    </script>
-    <script>
+
+        // Toast Notification Function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2500);
+            });
+        }
+
+        // Modal Logic & Keydown Esc
         document.querySelectorAll('.logo-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -404,7 +449,7 @@
                 const isMissing = this.getAttribute('data-status') === 'missing';
 
                 const overlay = document.createElement('div');
-                overlay.className = "fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-6 animate-fade-in";
+                overlay.className = "fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center p-6 transition-all duration-300";
                 overlay.style.backdropFilter = "blur(12px)";
 
                 let content = '';
@@ -432,8 +477,8 @@
                 }
 
                 overlay.innerHTML = `
-                    <div class="relative max-w-4xl w-full flex flex-col items-center animate-zoom-in">
-                        <button id="closeModal" class="absolute -top-12 right-0 md:-right-12 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold hover:bg-rose-600 hover:text-white transition-all">×</button>
+                    <div class="relative max-w-4xl w-full flex flex-col items-center">
+                        <button id="closeModal" class="absolute -top-12 right-0 md:-right-12 w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-rose-600 font-bold hover:bg-rose-600 hover:text-white transition-all cursor-pointer">×</button>
                         ${content}
                     </div>
                 `;
@@ -444,6 +489,15 @@
                 const close = () => { overlay.remove(); document.body.style.overflow = 'auto'; };
                 overlay.querySelector('#closeModal').onclick = close;
                 overlay.onclick = (e) => { if(e.target === overlay) close(); };
+
+                // Handle ESC key press
+                const handleEsc = (event) => {
+                    if (event.key === 'Escape') {
+                        close();
+                        window.removeEventListener('keydown', handleEsc);
+                    }
+                };
+                window.addEventListener('keydown', handleEsc);
             });
         });
     </script>
